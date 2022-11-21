@@ -1,0 +1,90 @@
+.container {
+  --bs-gutter-x: 13.5rem;
+}
+
+.weather-app {
+  border: 1px solid #dadde1;
+  margin: 20px auto;
+  border-radius: 10px;
+  height: 480px;
+  max-width: 800px;
+  min-width: 800px;
+}
+
+form {
+  z-index: 10;
+}
+.search {
+  position: relative;
+  left: 120px;
+  top: 80px;
+}
+.row {
+  font-size: 15px;
+}
+
+h1 {
+  position: relative;
+  left: 480px;
+  font-size: 90px;
+  top: 90px;
+  z-index: 10;
+}
+p {
+  position: relative;
+  left: 380px;
+  top: 70px;
+  font-size: 35px;
+  z-index: 10;
+}
+h5 {
+  position: relative;
+  left: 380px;
+  top: 55px;
+  font-size: 45px;
+  font-size: 23px;
+  font-weight: normal;
+  z-index: 10;
+}
+.temp-unit {
+  position: relative;
+  left: 600px;
+  top: 0px;
+  z-index: 11;
+}
+.townInput {
+  position: relative;
+  z-index: 10;
+  top: -570px;
+  left: 120px;
+}
+button {
+  position: relative;
+  top: -673px;
+  left: 370px;
+  border-radius: 5px;
+  z-index: 10;
+}
+button:hover {
+  cursor: pointer;
+}
+.background-image {
+  position: relative;
+  top: -250px;
+  left: 70px;
+}
+.days {
+  position: relative;
+  top: -415px;
+  left: -4px;
+  border: 1px solid black;
+  margin: 10px auto;
+  padding: 7px;
+  border-radius: 5px;
+}
+.col {
+  padding: 0px;
+}
+.row {
+  width: 80%;
+}
