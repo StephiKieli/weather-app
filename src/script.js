@@ -65,8 +65,8 @@ debugger;
 let currentTown = document.querySelector("#current");
 console.log(searchingTown);
 
-//searchingTown.addEventListener("sumbit", newTown);
-//currentTown.addEventListener("click", showcurrentTown);
+searchingTown.addEventListener("sumbit", newTown);
+currentTown.addEventListener("click", showcurrentTown);
 
 function showFahrenheit(event) {
   let unitF = document.querySelector("#aktuell-temp");
