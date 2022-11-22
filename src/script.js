@@ -45,8 +45,7 @@ function newTown(event) {
   console.log(inputTown);
 }
 
-function showPosition(position, event) {
-  event.preventDefault();
+function showPosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
   let apiKey = "dabf3a7434b4510eb851649c998cdcda";
