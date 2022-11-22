@@ -3,11 +3,11 @@
 }
 
 .weather-app {
-  border: 1px solid #dadde1;
   margin: 20px auto;
-  border-radius: 10px;
+
   height: 480px;
-  max-width: 800px;
+  width: 0px;
+  max-width: 450px;
   min-width: 800px;
 }
 
@@ -72,6 +72,7 @@ button:hover {
   position: relative;
   top: -250px;
   left: 70px;
+  border-radius: 5px;
 }
 .days {
   position: relative;
