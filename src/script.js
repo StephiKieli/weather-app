@@ -24,26 +24,28 @@ timeTodayM.innerHTML = dayTimeM;
 
 function showTemp(response) {
   let temp = Math.round(response.data.main.temp);
-  let currentTemp = (document.querySelector("#aktuell-temp").innerHTML = temp);
-  let weatherDescrip = (document.querySelector("h5").innerHTML =
-    response.data.weather[0].description);
-  let aktuellTown = (document.querySelector("#searching-town").innerHTML =
-    response.data.name);
-
+  let currentTemp = document.querySelector("#aktuell-temp");
+  let weatherDescrip = document.querySelector("h5");
+  let aktuellTown = document.querySelector("#searching-town");
+  aktuellTown.innerHTML = response.data.name;
+  weatherDescrip.innerHTML = response.data.weather[0].description;
+  currentTemp.innerHTML = temp;
   console.log(response.data.name);
 }
 
 function newTown(event) {
   event.preventDefault();
-  let inputTown = document.querySelector("#searching-input").value;
-  let aktuellTown = document.querySelector("#searching-town");
-  aktuellTown.innerHTML = inputTown.value;
+  let inputTown = document.querySelector("#searching-input");
+  //let aktuellTown = document.querySelector("#searching-town");
+  //aktuellTown.innerHTML = inputTown.value;
+
   let apiKey = "dabf3a7434b4510eb851649c998cdcda";
   let units = "metric";
-  let url = `https://api.openweathermap.org/data/2.5/weather?q=${inputTown}&appid=${apiKey}&units=${units}&lang=de`;
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${inputTown.value}&appid=${apiKey}&units=${units}&lang=de`;
 
-  aktuellTown.innerHTML = inputTown.value;
+  //aktuellTown.innerHTML = inputTown.value;
   axios.get(url).then(showTemp);
+  console.log(inputTown);
 }
 
 function showPosition(position) {
@@ -61,11 +63,9 @@ function showcurrentTown() {
 }
 
 let searchingTown = document.querySelector("#searching-form");
-debugger;
 let currentTown = document.querySelector("#current");
-console.log(searchingTown);
 
-searchingTown.addEventListener("sumbit", newTown);
+searchingTown.addEventListener("submit", newTown);
 currentTown.addEventListener("click", showcurrentTown);
 
 function showFahrenheit(event) {
