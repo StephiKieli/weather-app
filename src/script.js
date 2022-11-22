@@ -36,14 +36,11 @@ function showTemp(response) {
 function newTown(event) {
   event.preventDefault();
   let inputTown = document.querySelector("#searching-input");
-  //let aktuellTown = document.querySelector("#searching-town");
-  //aktuellTown.innerHTML = inputTown.value;
 
   let apiKey = "dabf3a7434b4510eb851649c998cdcda";
   let units = "metric";
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${inputTown.value}&appid=${apiKey}&units=${units}&lang=de`;
 
-  //aktuellTown.innerHTML = inputTown.value;
   axios.get(url).then(showTemp);
   console.log(inputTown);
 }
