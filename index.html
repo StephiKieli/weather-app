@@ -17,41 +17,55 @@
   <body>
     <div class="container">
       <div class="weather-app">
-        <form class="search" id="searching-form">
-          <input
-            type="text"
-            id="searching-input"
-            autocomplete="off"
-            placeholder="Suche nach Ort"
-          />
-          <input type="submit" value="Los" />
-        </form>
-        <h1 id="aktuell-temp">22</h1>
-        <span class="temp-unit">
-          <a href="#" id="celsius-link">°C</a> /
-          <a href="#" id="fahrenheit-link">°F</a>
-        </span>
+        <div class="row">
+          <div class="col-3">
+            <form class="search" id="searching-form">
+              <input
+                type="text"
+                id="searching-input"
+                autocomplete="off"
+                placeholder="Suche nach Ort"
+              />
+            </form>
+          </div>
 
-        <p class="date-time">
-          <span id="current-day"> Montag</span>
-          <a>,</a>
-          <span id="current-timeH"> 20</span>
-          <span> : </span>
-          <span id="current-timeS"> 00 </span>
-          <span> Uhr </span>
-        </p>
-        <h5>Teilweise bewölk</h5>
-        <span>
-          <img
-            src="image/wetterhintergrund.jpg"
-            width="650px"
-            alt="wetter"
-            class="background-image"
-        /></span>
+          <div class="col-1">
+            <input type="submit" value="Los" />
+          </div>
 
-        <h2 class="townInput" id="searching-town">Kreuzlingen</h2>
+          <div class="col-1">
+            <button id="current">Standort</button>
+          </div>
+        </div>
 
-        <button id="current">Standort</button>
+        <div class="row">
+          <div class="col-6">
+            <h2 class="townInput" id="searching-town">Kreuzlingen</h2>
+          </div>
+          <div class="col-6">
+            <div class="row">
+              <div class="col-3 temp">
+                <h1 id="aktuell-temp"></h1>
+              </div>
+              <div class="col-3 unit">
+                <span>
+                  <a href="#" id="celsius-link">°C</a> /
+                  <a href="#" id="fahrenheit-link">°F</a>
+                </span>
+              </div>
+            </div>
+
+            <p class="date-time">
+              <span id="current-day"> Montag</span>
+              <a>,</a>
+              <span id="current-timeH"> 20</span>
+              <span> : </span>
+              <span id="current-timeS"> 00 </span>
+              <span> Uhr </span>
+            </p>
+            <h5>Teilweise bewölk</h5>
+          </div>
+        </div>
 
         <div class="row days">
           <div class="col" id="day-2">Dienstag 🌤 <br />22°C</div>
