@@ -1,0 +1,14 @@
+Überlegung Wetter App
+*****************************
+
+< 0°C Flocken
+0-10 
+10-20
+20-30 Sonne
+> 30 Hitze
+
+>> Farbänderungen
+0-15 Blau / grau
+15-30 organge
+
+

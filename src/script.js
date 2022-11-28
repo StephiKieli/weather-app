@@ -37,10 +37,31 @@ function showTemp(response) {
   let currentTemp = document.querySelector("#aktuell-temp");
   let weatherDescrip = document.querySelector("h5");
   let aktuellTown = document.querySelector("#searching-town");
+  let emoji = document.querySelector("#emoji");
   aktuellTown.innerHTML = response.data.name;
   weatherDescrip.innerHTML = response.data.weather[0].description;
   currentTemp.innerHTML = temp;
-  console.log(response.data.name);
+
+  if (temp < 0) {
+    emoji.innerHTML = "❄⛄❄⛄";
+  } else {
+    if (temp >= 0 && temp <= 10) {
+      emoji.innerHTML = "🌥🌦🌥🌦";
+    } else {
+      if (temp > 10 && temp <= 20) {
+        emoji.innerHTML = "🌤⛅🌤⛅";
+      } else {
+        if (temp > 20 && temp <= 30) {
+          emoji.innerHTML = "☀🌻☀🌻";
+        } else {
+          emoji.innerHTML = "🏖🥵⛱";
+        }
+      }
+    }
+
+    console.log(response.data.name);
+    console.log(temp);
+  }
 }
 
 function search(city) {
