@@ -41,27 +41,10 @@ function showTemp(response) {
   aktuellTown.innerHTML = response.data.name;
   weatherDescrip.innerHTML = response.data.weather[0].description;
   currentTemp.innerHTML = temp;
-
-  //if (temp < 0) {
-  // emoji.innerHTML = "❄⛄❄⛄";
-  // } else {
-  //  if (temp >= 0 && temp <= 10) {
-  //    emoji.innerHTML = "🌥🌦🌥🌦";
-  //  } else {
-  //   if (temp > 10 && temp <= 20) {
-  //      emoji.innerHTML = "🌤⛅🌤⛅";
-  //    } else {
-  //      if (temp > 20 && temp <= 30) {
-  //       emoji.innerHTML = "☀🌻☀🌻";
-  //     } else {
-  //       emoji.innerHTML = "🏖🥵⛱";
-  //     }
-  //   //   }
-  //   }
-
-  //  console.log(response.data.name);
-  //   console.log(temp);
-  //   }
+  emoji.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function search(city) {
