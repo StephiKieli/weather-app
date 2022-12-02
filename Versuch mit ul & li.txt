@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <title>Kielis_WeatherApp</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <div class="row">
+          <div class="col-3">
+            <form class="search" id="searching-form">
+              <input
+                type="text"
+                id="searching-input"
+                autocomplete="off"
+                placeholder="Suche nach Ort"
+              />
+            </form>
+          </div>
+
+          <div class="col-1">
+            <input type="submit" value="Los" />
+          </div>
+
+          <div class="col-1">
+            <button id="current">Standort</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6">
+            <h2 class="townInput" id="searching-town"></h2>
+            <div>
+              <h3 class="emoji" id="emoji"></h3>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="row">
+              <div class="col-3 temp">
+                <div class="d-flex units">
+                  <h1 id="aktuell-temp"></h1>
+                  <span>
+                    <a href="#" id="celsius-link">°C</a>/
+                    <a href="#" id="fahrenheit-link">°F</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <ul>
+              <li>
+                <span id="current-day"> Montag</span>
+                <a>,</a>
+                <span id="current-timeH"> 20</span>
+                <span> : </span>
+                <span id="current-timeS"> 00 </span>
+                <span> Uhr </span>
+              </li>
+              <li>
+                <h5>Teilweise bewölk</h5>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row days">
+          <hr class="breakingLine" />
+
+          <div class="col" id="day-2">Dienstag 🌤 <br />22°C</div>
+          <div class="col" id="day-3">Mittwoch ☁<br />22°C</div>
+          <div class="col" id="day-4">Donnerstag 🌨<br />22°C</div>
+          <div class="col" id="day-5">Freitag ⛈<br />22°C</div>
+          <div class="col" id="day-6">Samstag ☀<br />2 2°C</div>
+        </div>
+        <div class="gitHubRef">
+          <a href="https://github.com/StephiKieli/weather-app" target="_blank"
+            >Open-source code
+          </a>
+          by Stephanie Kielmann
+        </div>
+      </div>
+    </div>
+
+    <script src="src/script.js" class="gitHubRref"></script>
+  </body>
+</html>
